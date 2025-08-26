@@ -145,12 +145,6 @@ jobs:
         run: npm install
         working-directory: stripepayment
 
-      - name: Create and push tag
-        run: npm run release
-        working-directory: stripepayment
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Install Composer Dependencies
         run: composer install --no-dev --prefer-dist --no-progress
         working-directory: stripepayment
