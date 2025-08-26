@@ -172,5 +172,8 @@ jobs:
         with:
           tag_name: v${{ steps.version.outputs.version }}
           files: release/stripepayment.zip
+          body: |
+            This is the official release for version v${{ steps.version.outputs.version }}.
+            Thank you for using our Moodle plugin!
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
